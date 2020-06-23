@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="container" style="padding: 10%">
       <h2>Contact Me</h2>
       <form action="mailto:lazerus88@gmail.com" method="post" enctype="text/plain">
@@ -17,12 +16,11 @@
             v-model="contact.message"
             rows="3"
             placeholder="write message"
-          ></textarea>
+          />
         </div>
+        <button type="button" @click="submit" class="btn btn-primary btn-lg">Contact</button>
       </form>
-      <button type="button" @click="submit" class="btn btn-primary btn-lg">Contact</button>
     </div>
-  </div>
 </template>
 
 <script>
