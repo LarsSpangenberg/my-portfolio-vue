@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import Contact from './Contact.vue';
+import Contact from './Contact';
 
 export default {
   name: 'Landing',
