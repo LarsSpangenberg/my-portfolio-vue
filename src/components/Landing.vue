@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section">
+    <section class="profile">
       <div class="container-fluid">
         <img
           alt="Vue logo"
@@ -9,10 +9,15 @@
         />
         <h1>Software Developer</h1>
         <p>First draft of my porfolio page created using vue.js and bootstrap.</p>
-        <button type="button" class="btn btn-primary btn-lg">Contact</button>
+        <button
+          type="button"
+          class="btn btn-primary btn-lg"
+          data-toggle="modal"
+          data-target=".bd-example-modal-lg"
+        >Contact</button>
       </div>
     </section>
-    <section class="protfolio">
+    <section class="portfolio">
       <h1>Portfolio</h1>
       <p>These are supposed to be sample projects</p>
       <div class="container">
@@ -89,11 +94,38 @@
         </div>
       </div>
     </section>
+    <!-- modal for contact -->
+    <section class>
+      <div
+        class="modal fade bd-example-modal-lg"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="contactModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <contact />
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
-<style lang="css" scoped>
-.section {
+<script>
+import Contact from './Contact.vue';
+
+export default {
+  name: 'Landing',
+  components: {
+    Contact,
+  },
+};
+</script>
+
+<style scoped>
+.profile {
   padding-top: 10%;
   padding-bottom: 10%;
 }
@@ -103,7 +135,7 @@
   width: auto;
 }
 
-.protfolio {
+.portfolio {
   background-color: #34345238;
   padding-top: 8%;
   padding-bottom: 15%;
