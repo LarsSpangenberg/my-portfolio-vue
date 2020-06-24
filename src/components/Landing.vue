@@ -5,7 +5,7 @@
     <!-- modal for contact -->
     <section>
       <div
-        class="modal fade bd-example-modal-lg"
+        class="modal fade contact-modal"
         tabindex="-1"
         role="dialog"
         aria-labelledby="contactModal"
@@ -23,7 +23,7 @@
 
 <script>
 import Profile from './Profile.vue';
-import Portfolio from './Portfolio.vue';
+import Portfolio from './portfolio/Portfolio.vue';
 import Contact from './Contact.vue';
 
 export default {

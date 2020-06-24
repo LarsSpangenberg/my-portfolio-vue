@@ -12,7 +12,7 @@
         type="button"
         class="btn btn-primary btn-lg"
         data-toggle="modal"
-        data-target=".bd-example-modal-lg"
+        data-target=".contact-modal"
       >Contact</button>
     </div>
   </section>
