@@ -1,26 +1,34 @@
 <template>
-    <div class="container" style="padding: 10%">
-      <h2>Contact Me</h2>
-      <form action="mailto:lazerus88@gmail.com" method="post" enctype="text/plain">
-        <div class="form-group">
-          <input
-            type="email"
-            class="form-control"
-            v-model="contact.eamil"
-            placeholder="Enter email"
-          />
-        </div>
-        <div class="form-group">
-          <textarea
-            class="form-control"
-            v-model="contact.message"
-            rows="3"
-            placeholder="write message"
-          />
-        </div>
-        <button type="button" @click="submit" class="btn btn-primary btn-lg">Contact</button>
-      </form>
-    </div>
+  <div class="container">
+    <h2>Contact Me</h2>
+    <form action="mailto:lazerus88@gmail.com" method="post" enctype="text/plain">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          v-model="contact.name"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          v-model="contact.email"
+          placeholder="Enter your email"
+        />
+      </div>
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          v-model="contact.message"
+          rows="3"
+          placeholder="Write a message"
+        />
+      </div>
+      <button type="button" @click="submit" class="btn btn-primary btn-lg">Contact</button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -28,6 +36,7 @@ export default {
   data() {
     return {
       contact: {
+        name: '',
         email: '',
         message: '',
       },
@@ -45,3 +54,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.container {
+  padding: 10%;
+}
+</style>

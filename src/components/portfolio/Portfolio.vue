@@ -4,7 +4,7 @@
     <p>These are supposed to be sample projects</p>
     <div class="container">
       <div class="row">
-        <project 
+        <project-card
           v-for="project in projects"
           :key="'project' + project.title"
           :project="project"
@@ -15,15 +15,15 @@
 </template>
 
 <script>
-import Project from './ProjectCard.vue';
-import Projects from './project-data';
+import projects from '@/data/portfolio-projects';
+import ProjectCard from './ProjectCard.vue';
 
 export default {
   data: () => ({
-    projects: Projects,
+    projects,
   }),
   components: {
-    Project,
+    ProjectCard,
   },
 };
 </script>
