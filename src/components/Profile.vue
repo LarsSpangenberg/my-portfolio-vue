@@ -4,7 +4,7 @@
       <img
         alt="Vue logo"
         class="rounded-circle profile-pic"
-        src="https://cdn.pixabay.com/photo/2020/06/04/12/55/emoji-5258611_960_720.png"
+        src="@/assets/stupid-face-200.png"
       />
       <h1>Software Developer</h1>
       <p>First draft of my porfolio page created using vue.js and bootstrap.</p>
@@ -25,7 +25,7 @@
 }
 
 .profile-pic {
-  height: 220px;
+  height: 200px;
   width: auto;
 }
 </style>
