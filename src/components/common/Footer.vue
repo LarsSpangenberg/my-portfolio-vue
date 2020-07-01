@@ -4,7 +4,7 @@
       <div class="col-12 col-md">
         <small class="d-block mb-3 text-muted">Lars Spangenberg © 2020</small>
       </div>
-      <div class="col-6 col-md">
+      <!-- <div class="col-6 col-md">
         <h5>Features</h5>
         <ul class="list-unstyled text-small">
           <li>
@@ -77,7 +77,7 @@
             <a class="text-muted" href="#">Terms</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>

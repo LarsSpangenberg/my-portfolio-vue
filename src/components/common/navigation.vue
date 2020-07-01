@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" :class="navBackground">
     <button
       class="navbar-toggler"
       type="button"
@@ -14,12 +14,12 @@
     <a class="navbar-brand" href="#">Navbar</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
+        <!-- <li class="nav-item active">
           <a class="nav-link" href="#">
             Home
             <span class="sr-only">(current)</span>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
@@ -38,3 +38,26 @@
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      scrollPosition: null,
+    };
+  },
+  computed: {
+    navBackground() {
+      return this.scrollPosition > window.innerHeight - 50 ? 'bg-dark' : 'bg-transparent';
+    },
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+};
+</script>
