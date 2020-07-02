@@ -19,9 +19,11 @@ import projects from '@/data/portfolio-projects';
 import ProjectCard from './ProjectCard.vue';
 
 export default {
-  data: () => ({
-    projects,
-  }),
+  data() {
+    return {
+      projects,
+    };
+  },
   components: {
     ProjectCard,
   },

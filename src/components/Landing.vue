@@ -1,6 +1,7 @@
 <template>
   <div>
     <profile />
+    <about />
     <portfolio />
     <!-- modal for contact -->
     <section>
@@ -23,6 +24,7 @@
 
 <script>
 import Profile from './Profile.vue';
+import About from './About.vue';
 import Portfolio from './portfolio/Portfolio.vue';
 import Contact from './Contact.vue';
 
@@ -30,6 +32,7 @@ export default {
   name: 'Landing',
   components: {
     Profile,
+    About,
     Portfolio,
     Contact,
   },
