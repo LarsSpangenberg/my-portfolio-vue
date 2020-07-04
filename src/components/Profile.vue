@@ -19,7 +19,6 @@
 .profile {
   background: #000000 url('../assets/desk-background.png') center top no-repeat
     fixed;
-  text-align: center;
 }
 
 .container {

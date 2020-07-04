@@ -10,13 +10,14 @@
           />
         </div>
         <div class="col-md-8">
-          <h1>Hi, I'm Lars. Nice to meet you!</h1>
-          <p>I have been teaching myself coding for about 3 years and I am consistently
-          growing and learning more to adapt to the fast changing environment in the
-          tech world.</p>
-          <p>My current stack includes the MERN stack along with Redux, Vue js, Jquery,
-          and many other complementing libraries. I have also been coding a lot in Java
-          and Android.</p>
+          <h1 class="about-title">Hi, I'm Lars. Nice to meet you!</h1>
+          <p>I am a self-taught developer, constantly learning, and enjoying every minute of it.</p>
+          <h2>My tech stack:</h2>
+          <p>JavaScript, Java, MERN Stack, Vue.js, JQuery, Android Studio, Jakarta EE, SQL,
+            and more... </p>
+          <h2>Other tools and libraries I use regularly:</h2>
+          <p>Redux, Bootstrap, Github, Visual Code Studio, IntelliJ IDEA, Chrome Dev Tools, Dagger,
+            Anroid Architecture Components, and more...</p>
         </div>
       </div>
     </div>
@@ -24,8 +25,25 @@
 </template>
 
 <style scoped>
+.about {
+  text-align: left;
+}
+
 .container {
   padding-top: 10%;
   padding-bottom: 10%;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 8%;
+}
+
+p {
+  margin-top: 2%;
 }
 </style>
