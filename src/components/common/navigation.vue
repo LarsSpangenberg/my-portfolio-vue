@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     navBackground() {
-      return this.scrollPosition > window.innerHeight / 3 ? 'bg-dark' : 'bg-transparent';
+      return (this.scrollPosition > window.innerHeight / 3) ? 'bg-dark' : 'bg-transparent';
     },
   },
   methods: {

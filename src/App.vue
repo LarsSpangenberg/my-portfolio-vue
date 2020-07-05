@@ -27,4 +27,15 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  /* font-weight: 400; */
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+
+  /* font-weight: 300; */
+}
 </style>
