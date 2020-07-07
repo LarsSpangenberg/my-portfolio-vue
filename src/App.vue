@@ -30,12 +30,11 @@ export default {
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
-  /* font-weight: 400; */
+  font-weight: 400;
 }
 
 p {
   font-family: 'Roboto Slab', serif;
-
-  /* font-weight: 300; */
+  font-weight: 300;
 }
 </style>

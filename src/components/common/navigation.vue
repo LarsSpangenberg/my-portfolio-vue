@@ -39,6 +39,12 @@
   </nav>
 </template>
 
+<style scoped>
+.navbar {
+  transition: all .1s;
+}
+</style>
+
 <script>
 export default {
   data() {
@@ -48,7 +54,7 @@ export default {
   },
   computed: {
     navBackground() {
-      return (this.scrollPosition > window.innerHeight / 3) ? 'bg-dark' : 'bg-transparent';
+      return (this.scrollPosition > window.innerHeight - 100) ? 'bg-dark' : 'bg-transparent';
     },
   },
   methods: {
@@ -56,8 +62,11 @@ export default {
       this.scrollPosition = window.scrollY;
     },
   },
-  mounted() {
+  created() {
     window.addEventListener('scroll', this.updateScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.updateScroll);
   },
 };
 </script>

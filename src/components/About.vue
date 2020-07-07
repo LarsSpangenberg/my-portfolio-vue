@@ -2,14 +2,14 @@
   <section class="about">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-5">
           <img
             alt="author thumbnail"
             class="rounded-circle profile-pic"
             src="@/assets/stupid-face-200.png"
           />
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 about-content">
           <h1 class="about-title">Hi, I'm Lars. Nice to meet you!</h1>
           <p>I am a self-taught developer, constantly learning, and enjoying every minute of it.</p>
           <h2>My tech stack:</h2>
@@ -25,13 +25,13 @@
 </template>
 
 <style scoped>
-.about {
-  text-align: left;
-}
-
 .container {
   padding-top: 10%;
   padding-bottom: 10%;
+}
+
+.about-content {
+  text-align: left;
 }
 
 h1 {
