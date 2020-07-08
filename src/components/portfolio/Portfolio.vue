@@ -1,8 +1,11 @@
 <template>
   <section class="portfolio">
-    <h1>Portfolio</h1>
-    <p>These are supposed to be sample projects</p>
-    <div class="container">
+    <div class="container intro">
+      <h1>My Recent Projects</h1>
+      <p>The following are all personal projects that I've recently worked on. You can also find
+        more on my Github.</p>
+    </div>
+    <div class="container project-list">
       <div class="row">
         <project-card
           v-for="project in projects"
@@ -35,12 +38,9 @@ export default {
   background-color: #34345238;
   padding-top: 8%;
   padding-bottom: 15%;
-  /* padding:15% */
 }
 
-.portfolio-img {
-  width: 140px;
-  height: 140px;
-  margin-top: 15px;
+.project-list {
+  margin-top: 3%;
 }
 </style>

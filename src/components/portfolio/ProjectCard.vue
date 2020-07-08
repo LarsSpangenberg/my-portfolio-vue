@@ -2,7 +2,11 @@
   <div class="col-md-4 mb-4">
     <div class="card">
       <div class="card-head">
-        <img alt="Vue logo" class="rounded-circle portfolio-img" :src="project.image" />
+        <img
+          alt="Vue logo"
+          class="rounded-circle project-img"
+          :src="project.image"
+        />
         <h2>{{ project.title }}</h2>
       </div>
       <hr />
@@ -23,16 +27,9 @@ export default {
 </script>
 
 <style scoped>
-.portfolio {
-  background-color: #34345238;
-  padding-top: 8%;
-  padding-bottom: 15%;
-  /* padding:15% */
-}
-
-.portfolio-img {
+.project-img {
   width: 140px;
   height: 140px;
-  margin-top: 15px;
+  margin: 50px;
 }
 </style>
