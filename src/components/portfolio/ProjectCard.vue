@@ -1,18 +1,20 @@
 <template>
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-head">
+  <div class="col-md-6 mx-auto mb-4">
+    <div class="card border-dark">
+      <div class="card-header">
         <img
-          alt="Vue logo"
-          class="rounded-circle project-img"
+          alt="Project Image"
+          class="rounded-circle card-img-top project-img"
           :src="project.image"
         />
-        <h2>{{ project.title }}</h2>
       </div>
-      <hr />
-      <div class="card-body">
-        <p>{{ project.description }}</p>
-        <button type="button" class="btn btn-outline-secondary">More</button>
+      <div class="card-body d-flex flex-column justify-content-between">
+        <h3 class="card-title">{{ project.title }}</h3>
+        <p class="card-text">{{ project.description }}</p>
+        <div class="project-links">
+          <button type="button" class="btn btn-outline-secondary">Code</button>
+          <button type="button" class="btn btn-outline-secondary btn-demo">Demo</button>
+        </div>
       </div>
     </div>
   </div>
@@ -27,9 +29,18 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  height: 100%;
+  /* padding: 20px; */
+}
+
 .project-img {
   width: 140px;
   height: 140px;
   margin: 50px;
+}
+
+.btn-demo {
+  margin-left: 20px;
 }
 </style>

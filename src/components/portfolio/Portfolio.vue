@@ -2,8 +2,11 @@
   <section class="portfolio">
     <div class="container intro">
       <h1>My Recent Projects</h1>
-      <p>The following are all personal projects that I've recently worked on. You can also find
-        more on my Github.</p>
+      <p>
+        The following are all personal projects that I've recently worked on.
+        You can also find more on my
+        <a href="https://github.com/LarsSpangenberg" target="_blank">Github</a>.
+      </p>
     </div>
     <div class="container project-list">
       <div class="row">

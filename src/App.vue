@@ -36,5 +36,6 @@ h1, h2, h3 {
 p {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
+  line-height: 2rem;
 }
 </style>
