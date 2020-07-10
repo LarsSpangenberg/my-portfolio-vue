@@ -1,5 +1,5 @@
 <template>
-  <section class="profile">
+  <section id="profile" class="profile">
     <div class="jumbotron-fluid text-light">
       <div class="container">
         <div class="header-content" :class="showTitle">

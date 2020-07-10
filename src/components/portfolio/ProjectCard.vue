@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-6 mx-auto mb-4">
+  <div class="col-lg-6 mx-auto mb-4">
     <div class="card border-dark">
       <div class="card-header">
         <img
@@ -9,7 +9,12 @@
         />
       </div>
       <div class="card-body d-flex flex-column justify-content-between">
-        <h3 class="card-title">{{ project.title }}</h3>
+        <h3
+          class="card-title mt-3"
+          :class="project.technologies ? '' : 'mb-5'"
+        >
+        {{ project.title }}
+        </h3>
         <h4
           v-if="project.technologies"
           class="card-subtitle mb-5 text-muted"
@@ -17,7 +22,7 @@
           {{ project.technologies }}
         </h4>
         <p class="card-text">{{ project.description }}</p>
-        <div class="project-links">
+        <div class="project-links my-3 mx-auto">
           <button type="button" class="btn btn-outline-secondary">Code</button>
           <button type="button" class="btn btn-outline-secondary btn-demo">Demo</button>
         </div>
