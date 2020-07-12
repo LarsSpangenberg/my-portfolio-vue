@@ -25,16 +25,15 @@
         <li class="nav-item">
           <a class="nav-link" href="#portfolio">Portfolio</a>
         </li>
-        <!-- TODO: turn contact into button -->
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#"
-            data-toggle="modal"
-            data-target=".contact-modal"
-          >Contact</a>
-        </li>
       </ul>
+      <button
+        class="btn navbar-btn btn-outline-info my-2 my-sm-0"
+        type="button"
+        data-toggle="modal"
+        data-target=".contact-modal"
+      >
+        Contact
+      </button>
     </div>
   </nav>
 </template>
