@@ -4,7 +4,6 @@
     class="navbar fixed-top navbar-expand-lg navbar-dark"
     :class="navBackground"
   >
-    <!-- TODO: menu overlaps header title when toggled menu is active on small screens -->
     <button
       class="navbar-toggler"
       type="button"
@@ -27,7 +26,7 @@
         </li>
       </ul>
       <button
-        class="btn navbar-btn btn-outline-info my-2 my-sm-0"
+        class="btn navbar-btn btn-outline-info my-lg-0 my-2 "
         type="button"
         data-toggle="modal"
         data-target=".contact-modal"
@@ -38,35 +37,29 @@
   </nav>
 </template>
 
+<script>
+export default {
+  props: {
+    scrollPosition: Number,
+  },
+  computed: {
+    navBackground() {
+      const isSmallScreen = window.innerWidth < 990;
+      if (isSmallScreen) {
+        if (this.$props.scrollPosition > window.innerHeight - 200) {
+          return 'bg-dark';
+        }
+      } else if (this.$props.scrollPosition > window.innerHeight - 100) {
+        return 'bg-dark';
+      }
+      return 'bg-transparent';
+    },
+  },
+};
+</script>
+
 <style scoped>
 .navbar {
   transition: all .1s;
 }
 </style>
-
-<script>
-export default {
-  // TODO: moved navigation out of App.vue now i can move this code to landing for dry code
-  data() {
-    return {
-      scrollPosition: null,
-    };
-  },
-  computed: {
-    navBackground() {
-      return (this.scrollPosition > window.innerHeight - 100) ? 'bg-dark' : 'bg-transparent';
-    },
-  },
-  methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.updateScroll);
-  },
-};
-</script>

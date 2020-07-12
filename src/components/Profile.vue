@@ -46,26 +46,21 @@ h1 {
 
 <script>
 export default {
-  data() {
-    return {
-      scrollPosition: null,
-    };
+  props: {
+    scrollPosition: Number,
   },
   computed: {
     showTitle() {
-      return (this.scrollPosition < window.innerHeight / 3) ? '' : 'hidden';
+      const isSmallScreen = window.innerWidth < 990;
+      if (isSmallScreen) {
+        if (this.$props.scrollPosition < 100) {
+          return '';
+        }
+      } else if (this.$props.scrollPosition < window.innerHeight / 3) {
+        return '';
+      }
+      return 'hidden';
     },
-  },
-  methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.updateScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.updateScroll);
   },
 };
 </script>

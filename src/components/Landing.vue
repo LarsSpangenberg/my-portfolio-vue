@@ -1,7 +1,7 @@
 <template>
   <div>
-    <navigation />
-    <profile />
+    <navigation :scrollPosition='scrollPosition' />
+    <profile :scrollPosition='scrollPosition' />
     <about />
     <portfolio />
     <section id="contact">
@@ -40,6 +40,22 @@ export default {
     Portfolio,
     Contact,
     MainFooter,
+  },
+  data() {
+    return {
+      scrollPosition: null,
+    };
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
+  created() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.updateScroll);
   },
 };
 </script>
