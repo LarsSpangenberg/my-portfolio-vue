@@ -18,6 +18,14 @@
     <a class="navbar-brand" href="#profile">Lars Spangenberg</a>
     <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <!-- FIXME: router link not linking. Set up scrollBehavior? -->
+        <router-link
+          class="nav-item"
+          :to="{ name: home, hash: '#about' }"
+          tag="li"
+        >
+          <a class="nav-link">About</a>
+        </router-link>
         <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
         </li>
@@ -26,7 +34,7 @@
         </li>
       </ul>
       <button
-        class="btn navbar-btn btn-outline-info my-lg-0 my-2 "
+        class="btn navbar-btn btn-outline-info my-2 my-lg-0"
         type="button"
         data-toggle="modal"
         data-target=".contact-modal"

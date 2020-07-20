@@ -32,7 +32,7 @@ import Contact from './Contact.vue';
 import MainFooter from './common/Footer.vue';
 
 export default {
-  name: 'Landing',
+  name: 'home',
   components: {
     Navigation,
     Profile,
