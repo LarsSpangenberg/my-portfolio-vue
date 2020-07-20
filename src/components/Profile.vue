@@ -2,20 +2,35 @@
   <section id="profile" class="profile">
     <div class="jumbotron-fluid text-light">
       <div class="container">
-        <div class="header-content" :class="showTitle">
+        <div class="header-content" :class="titleVisibility">
           <h1>Fullstack Web and Android Developer</h1>
-          <p>Greatest Deveoper on the Planet</p>
+          <p>Most powerful Developer on the Planet, with an IQ of over 9000.</p>
         </div>
       </div>
-      <!-- <button
-        type="button"
-        class="btn btn-primary btn-lg"
-        data-toggle="modal"
-        data-target=".contact-modal"
-      >Contact</button>-->
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  props: {
+    scrollPosition: Number,
+  },
+  computed: {
+    titleVisibility() {
+      const isSmallScreen = window.innerWidth < 990;
+      if (isSmallScreen) {
+        if (this.$props.scrollPosition < 100) {
+          return '';
+        }
+      } else if (this.$props.scrollPosition < window.innerHeight / 3) {
+        return '';
+      }
+      return 'hidden';
+    },
+  },
+};
+</script>
 
 <style scoped>
 .container {
@@ -43,24 +58,3 @@ h1 {
   font-weight: 200;
 }
 </style>
-
-<script>
-export default {
-  props: {
-    scrollPosition: Number,
-  },
-  computed: {
-    showTitle() {
-      const isSmallScreen = window.innerWidth < 990;
-      if (isSmallScreen) {
-        if (this.$props.scrollPosition < 100) {
-          return '';
-        }
-      } else if (this.$props.scrollPosition < window.innerHeight / 3) {
-        return '';
-      }
-      return 'hidden';
-    },
-  },
-};
-</script>

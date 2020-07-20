@@ -1,48 +1,37 @@
 <template>
-  <nav
-    id="main-navbar"
-    class="navbar fixed-top navbar-expand-lg navbar-dark"
+  <b-navbar
     :class="navBackground"
+    variant="dark"
+    type="dark"
+    fixed="top"
+    toggleable="lg"
+    v-b-scrollspy="300"
   >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarToggler"
-      aria-controls="navbarToggler"
+    <b-navbar-toggle
+      target="nav-collapse"
+      aria-controls="nav-collapse"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon" />
-    </button>
-    <a class="navbar-brand" href="#profile">Lars Spangenberg</a>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <!-- FIXME: router link not linking. Set up scrollBehavior? -->
-        <router-link
-          class="nav-item"
-          :to="{ name: home, hash: '#about' }"
-          tag="li"
+    </b-navbar-toggle>
+    <b-navbar-brand to="#profile">Lars Spangenberg</b-navbar-brand>
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="mr-auto mt-2 mt-lg-0">
+        <b-nav-item to="#about">About</b-nav-item>
+        <b-nav-item to="#portfolio">Portfolio</b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav>
+        <b-button
+          class="btn-outline-info my-2 my-lg-0"
+          data-toggle="modal"
+          data-target=".contact-modal"
         >
-          <a class="nav-link">About</a>
-        </router-link>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-      </ul>
-      <button
-        class="btn navbar-btn btn-outline-info my-2 my-lg-0"
-        type="button"
-        data-toggle="modal"
-        data-target=".contact-modal"
-      >
-        Contact
-      </button>
-    </div>
-  </nav>
+          Contact
+        </b-button>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>
@@ -55,10 +44,10 @@ export default {
       const isSmallScreen = window.innerWidth < 990;
       if (isSmallScreen) {
         if (this.$props.scrollPosition > window.innerHeight - 200) {
-          return 'bg-dark';
+          return '';
         }
       } else if (this.$props.scrollPosition > window.innerHeight - 100) {
-        return 'bg-dark';
+        return '';
       }
       return 'bg-transparent';
     },
