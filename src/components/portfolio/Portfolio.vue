@@ -1,22 +1,22 @@
 <template>
   <section id="portfolio" class="portfolio">
-    <div class="container intro">
+    <b-container class="intro">
       <h1>My Recent Projects</h1>
       <p>
         The following are all personal projects that I've recently worked on.
         You can also find more on my
         <a href="https://github.com/LarsSpangenberg" target="_blank">Github</a>.
       </p>
-    </div>
-    <div class="container project-list">
-      <div class="row">
+    </b-container>
+    <b-container class="project-list">
+      <b-row>
         <project-card
-          v-for="project in projects"
-          :key="'project' + project.title"
+          v-for="(project, index) in projects"
+          :key="'project' + index"
           :project="project"
         />
-      </div>
-    </div>
+      </b-row>
+    </b-container>
   </section>
 </template>
 

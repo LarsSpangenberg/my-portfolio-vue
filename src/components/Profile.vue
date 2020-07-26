@@ -1,56 +1,71 @@
 <template>
-  <section id="profile" class="profile">
-    <div class="jumbotron-fluid text-light">
-      <div class="container">
-        <div class="header-content" :class="titleVisibility">
-          <h1>Fullstack Web and Android Developer</h1>
-          <p>Most powerful Developer on the Planet, with an IQ of over 9000.</p>
-        </div>
+  <section id="profile">
+    <b-container
+      class="text-light profile-container pb-5"
+      :class="containerSize"
+      fluid
+    >
+      <div class="header-content" :class="titleVisibility">
+        <h1>Fullstack Web and Android Developer</h1>
+        <p>Most powerful Developer on the Planet, with an IQ of over 9000.</p>
       </div>
-    </div>
+    </b-container>
   </section>
 </template>
 
 <script>
 export default {
-  props: {
-    scrollPosition: Number,
+  data() {
+    return {
+      titleVisibility: '',
+      containerSize: '',
+    };
   },
-  computed: {
-    titleVisibility() {
-      const isSmallScreen = window.innerWidth < 990;
-      if (isSmallScreen) {
-        if (this.$props.scrollPosition < 100) {
-          return '';
-        }
-      } else if (this.$props.scrollPosition < window.innerHeight / 3) {
-        return '';
+  props: {
+    scrolledPastHeader: Boolean,
+  },
+  watch: {
+    scrolledPastHeader(scrolledPast) {
+      if (scrolledPast) {
+        this.titleVisibility = 'hidden';
+        this.containerSize = 'shrunk';
+      } else {
+        this.titleVisibility = '';
+        this.containerSize = '';
       }
-      return 'hidden';
     },
   },
 };
 </script>
 
 <style scoped>
-.container {
+.profile-container {
+  background: #000000 url('../assets/desk-background.png') center top no-repeat fixed;
   height: 100vh;
   padding-top: 45vh;
   padding-bottom: 20vh;
-}
-
-.profile {
-  background: #000000 url('../assets/desk-background.png') center top no-repeat
-    fixed;
+  transition: all .7s ease-in-out;
 }
 
 .header-content {
   opacity: 1;
-  transition: all .3s;
+  transition: all .7s ease-in-out;
+}
+
+.shrunk {
+  height: 0;
+}
+
+@media only screen and (max-width: 990px) {
+  .shrunk {
+    height: 0;
+    margin-top: -120px;
+  }
 }
 
 .hidden {
   opacity: 0;
+  margin-top: -500px;
 }
 
 h1 {

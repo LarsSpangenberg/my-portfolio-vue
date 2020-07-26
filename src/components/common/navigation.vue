@@ -15,17 +15,20 @@
     >
       <span class="navbar-toggler-icon" />
     </b-navbar-toggle>
+
     <b-navbar-brand to="#profile">Lars Spangenberg</b-navbar-brand>
+
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="mr-auto mt-2 mt-lg-0">
         <b-nav-item to="#about">About</b-nav-item>
         <b-nav-item to="#portfolio">Portfolio</b-nav-item>
       </b-navbar-nav>
+
       <b-navbar-nav>
         <b-button
-          class="btn-outline-info my-2 my-lg-0"
-          data-toggle="modal"
-          data-target=".contact-modal"
+          class="my-2 my-lg-0"
+          variant="outline-info"
+          v-b-modal.contact-modal
         >
           Contact
         </b-button>
@@ -37,19 +40,11 @@
 <script>
 export default {
   props: {
-    scrollPosition: Number,
+    scrolledPastHeader: Boolean,
   },
   computed: {
     navBackground() {
-      const isSmallScreen = window.innerWidth < 990;
-      if (isSmallScreen) {
-        if (this.$props.scrollPosition > window.innerHeight - 200) {
-          return '';
-        }
-      } else if (this.$props.scrollPosition > window.innerHeight - 100) {
-        return '';
-      }
-      return 'bg-transparent';
+      return this.$props.scrolledPastHeader ? '' : 'bg-transparent';
     },
   },
 };

@@ -29,4 +29,9 @@ p {
   font-weight: 300;
   line-height: 2rem;
 }
+
+.modal-backdrop {
+  opacity: 0.75;
+  transition: opacity 0.3s ease-in-out;
+}
 </style>

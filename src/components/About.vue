@@ -1,15 +1,15 @@
 <template>
   <section id="about" class="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-5">
+    <b-container>
+      <b-row>
+        <b-col class="mb-5" md="4">
           <img
             alt="author thumbnail"
             class="rounded-circle profile-pic"
             src="@/assets/stupid-face-200.png"
           />
-        </div>
-        <div class="col-md-8 about-content">
+        </b-col>
+        <b-col class="about-content" md="8">
           <h1 class="about-title">Hi, I'm Lars. Nice to meet you!</h1>
           <p>I am a self-taught developer, constantly learning, and enjoying every minute of it.</p>
           <h2>My tech stack:</h2>
@@ -18,9 +18,9 @@
           <h2>Other tools and libraries I use regularly:</h2>
           <p>Redux, Bootstrap, Github, Visual Code Studio, IntelliJ IDEA, Chrome Dev Tools, Dagger,
             Anroid Architecture Components, and more...</p>
-        </div>
-      </div>
-    </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </section>
 </template>
 
