@@ -1,7 +1,7 @@
 <template>
   <section id="profile">
     <b-container
-      class="text-light profile-container pb-5"
+      class="text-light profile-container profile-background-img pb-5"
       :class="containerSize"
       fluid
     >
@@ -40,11 +40,36 @@ export default {
 
 <style scoped>
 .profile-container {
-  background: #000000 url('../assets/desk-background.png') center top no-repeat fixed;
+  background: #000000 center top no-repeat fixed;
+  background-size: cover;
   height: 100vh;
   padding-top: 45vh;
   padding-bottom: 20vh;
   transition: all .7s ease-in-out;
+}
+
+@media (min-width: 769px) {
+  .profile-background-img {
+    background-image: url('../assets/portfolio-banner-1920.png');
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .profile-background-img {
+    background-image: url('../assets/portfolio-banner-768.png');
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-background-img {
+    background-image: url('../assets/portfolio-banner-480.png');
+  }
+}
+
+@media (min-width: 769px) {
+  .profile-background-img {
+    background-image: url('../assets/portfolio-banner-1920.png');
+  }
 }
 
 .header-content {

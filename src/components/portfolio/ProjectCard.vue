@@ -7,14 +7,18 @@
           :src="project.image"
           alt="Project Image"
         />
+
         <b-card-title class="mt-3" :class="project.technologies ? '' : 'mb-5'">
           {{ project.title }}
         </b-card-title>
+
         <b-card-sub-title class="mb-5" v-if="project.technologies">
           {{ project.technologies }}
         </b-card-sub-title>
+
         <b-card-text class="card-text">{{ project.description }}</b-card-text>
       </b-card-body>
+
       <b-card-body class="project-links flex-grow-0 mb-2 mx-auto">
         <b-button variant="outline-secondary">Code</b-button>
         <b-button class="ml-5" variant="outline-secondary">Demo</b-button>
