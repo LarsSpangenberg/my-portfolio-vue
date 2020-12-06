@@ -1,7 +1,7 @@
 <template>
   <div>
     <navigation :scrolledPastHeader='scrolledPastHeader' />
-    <profile :scrolledPastHeader='scrolledPastHeader' />
+    <intro :scrolledPastHeader='scrolledPastHeader' />
     <about />
     <portfolio />
     <contact />
@@ -11,7 +11,7 @@
 
 <script>
 import Navigation from './common/Navigation.vue';
-import Profile from './Profile.vue';
+import Intro from './Intro.vue';
 import About from './About.vue';
 import Portfolio from './portfolio/Portfolio.vue';
 import Contact from './contact/Contact.vue';
@@ -21,7 +21,7 @@ export default {
   name: 'home',
   components: {
     Navigation,
-    Profile,
+    Intro,
     About,
     Portfolio,
     Contact,
@@ -34,11 +34,12 @@ export default {
   },
   computed: {
     scrolledPastHeader() {
-      if (window.innerWidth < 990) {
-        if (this.scrollPosition > 100) {
-          return true;
-        }
-      } else if (this.scrollPosition > window.innerHeight / 3) {
+      // if (window.innerWidth < 990) {
+      //   if (this.scrollPosition > 100) {
+      //     return true;
+      //   }
+      // } else
+      if (this.scrollPosition > window.innerHeight / 3) {
         return true;
       }
       return false;
