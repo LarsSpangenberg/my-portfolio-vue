@@ -26,8 +26,9 @@
 
 <style scoped>
 .container {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  min-height: 100vh;
 }
 
 .about-content {

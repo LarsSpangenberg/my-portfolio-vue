@@ -20,7 +20,6 @@ export default {
   data() {
     return {
       titleVisibility: '',
-      containerSize: '',
     };
   },
   props: {
@@ -30,10 +29,8 @@ export default {
     scrolledPastHeader(scrolledPast) {
       if (scrolledPast) {
         this.titleVisibility = 'hidden';
-        this.containerSize = 'shrunk';
       } else {
         this.titleVisibility = '';
-        this.containerSize = '';
       }
     },
   },
@@ -81,17 +78,6 @@ export default {
     background-image: url('../assets/portfolio-banner-sm.png');
   }
 }
-
-.shrunk {
-  height: 0;
-}
-
-/* @media only screen and (max-width: 990px) {
-  .shrunk {
-    height: 0;
-    margin-top: -120px;
-  }
-} */
 
 .hidden {
   opacity: 0;

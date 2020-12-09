@@ -18,7 +18,7 @@
           {{ project.technologies }}
         </b-card-sub-title>
 
-        <b-card-text class="card-text mt-3">{{ project.description }}</b-card-text>
+        <b-card-text class="card-text mt-4">{{ project.description }}</b-card-text>
       </b-card-body>
 
       <b-card-body class="project-links flex-grow-0 mb-2 mx-auto">

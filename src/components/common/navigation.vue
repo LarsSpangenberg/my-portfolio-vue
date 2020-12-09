@@ -4,7 +4,7 @@
     variant="dark"
     type="dark"
     fixed="top"
-    toggleable="lg"
+    toggleable="md"
     v-b-scrollspy="300"
   >
     <b-navbar-toggle
@@ -16,12 +16,12 @@
       <span class="navbar-toggler-icon" />
     </b-navbar-toggle>
 
-    <b-navbar-brand to="#intro">Lars Spangenberg</b-navbar-brand>
+    <b-navbar-brand to="#" v-scroll-to="'#intro'">Lars Spangenberg</b-navbar-brand>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="mr-auto mt-2 mt-lg-0">
-        <b-nav-item to="#about">About</b-nav-item>
-        <b-nav-item to="#portfolio">Portfolio</b-nav-item>
+        <b-nav-item to="#about" v-scroll-to="'#about'">About</b-nav-item>
+        <b-nav-item to="#portfolio" v-scroll-to="'#portfolio'">Portfolio</b-nav-item>
       </b-navbar-nav>
 
       <b-navbar-nav>
