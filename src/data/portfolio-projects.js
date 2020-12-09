@@ -6,9 +6,11 @@ export default [
     description: 'This is a simple list app in which the user can keep track of their tv shows and which episode they are on. There are also many filtering, tagging, and sorting options to keep the lists organized and customizable. This is aimed at users who may use many streaming services and tend to lose track of their shows.',
   },
   {
-    title: 'web project',
-    image: 'https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_960_720.jpg',
-    description: 'Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna',
+    title: 'Portfolio',
+    // image: 'https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_960_720.jpg',
+    localImage: 'portfolio-thumbnail.png',
+    technologies: 'JavaScript, Vue.js, BootstrapVue, AWS',
+    description: "Basically, this is the portfolio page you are on right now. It's included here as an example of one of my Vue projects and to provide a link to the source code",
   },
   {
     title: 'web project',
