@@ -2,7 +2,6 @@
   <section id="intro">
     <b-container
       class="text-light intro-container intro-background-img pb-5"
-      :class="containerSize"
       fluid
     >
       <div class="header-content mx-3" :class="titleVisibility">
@@ -24,11 +23,15 @@ export default {
   },
   props: {
     scrolledPastHeader: Boolean,
+    cancelAutoScroll: Boolean,
   },
   watch: {
     scrolledPastHeader(scrolledPast) {
       if (scrolledPast) {
         this.titleVisibility = 'hidden';
+        if (!this.cancelAutoScroll) {
+          this.$scrollTo('#about');
+        }
       } else {
         this.titleVisibility = '';
       }

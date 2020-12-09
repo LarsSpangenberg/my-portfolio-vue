@@ -19,10 +19,6 @@ export default {
   color: #2c3e50;
 }
 
-html {
-  scroll-behavior: smooth;
-};
-
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;

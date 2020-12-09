@@ -16,12 +16,12 @@
       <span class="navbar-toggler-icon" />
     </b-navbar-toggle>
 
-    <b-navbar-brand to="#" v-scroll-to="'#intro'">Lars Spangenberg</b-navbar-brand>
+    <b-navbar-brand to="#" v-scroll-to="scrollOptions('#intro')">Lars Spangenberg</b-navbar-brand>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="mr-auto mt-2 mt-lg-0">
-        <b-nav-item to="#about" v-scroll-to="'#about'">About</b-nav-item>
-        <b-nav-item to="#portfolio" v-scroll-to="'#portfolio'">Portfolio</b-nav-item>
+        <b-nav-item to="#about" v-scroll-to="scrollOptions('#about')">About</b-nav-item>
+        <b-nav-item to="#portfolio" v-scroll-to="scrollOptions('#portfolio')">Portfolio</b-nav-item>
       </b-navbar-nav>
 
       <b-navbar-nav>
@@ -39,12 +39,34 @@
 
 <script>
 export default {
+  // data() {
+  //   return {
+  //     navItemClicked: false,
+  //   };
+  // },
   props: {
     scrolledPastHeader: Boolean,
   },
   computed: {
     navBackground() {
       return this.$props.scrolledPastHeader ? '' : 'bg-transparent';
+    },
+  },
+  methods: {
+    scrollOptions(to) {
+      const v = this;
+      return {
+        el: to,
+        onStart() {
+          v.$emit('navItemClicked', true);
+        },
+        onDone() {
+          v.$emit('navItemClicked', false);
+        },
+        onCancel() {
+          v.$emit('navItemClicked', false);
+        },
+      };
     },
   },
 };

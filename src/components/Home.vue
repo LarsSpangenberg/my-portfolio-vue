@@ -1,7 +1,13 @@
 <template>
   <div>
-    <navigation :scrolledPastHeader='scrolledPastHeader' />
-    <intro :scrolledPastHeader='scrolledPastHeader' />
+    <navigation
+      :scrolledPastHeader='scrolledPastHeader'
+      @navItemClicked='navItemClicked = $event'
+    />
+    <intro
+      :scrolledPastHeader='scrolledPastHeader'
+      :cancelAutoScroll='cancelHeaderAutoScroll'
+    />
     <about />
     <portfolio />
     <contact />
@@ -30,16 +36,24 @@ export default {
   data() {
     return {
       scrollPosition: null,
+      navItemClicked: false,
     };
   },
   computed: {
     scrolledPastHeader() {
-      // if (window.innerWidth < 990) {
-      //   if (this.scrollPosition > 100) {
-      //     return true;
-      //   }
-      // } else
-      if (this.scrollPosition > window.innerHeight / 3) {
+      // if (this.navItemClicked) return false;
+
+      if (window.innerWidth < 990) {
+        if (this.scrollPosition > 100) {
+          return true;
+        }
+      } else if (this.scrollPosition > window.innerHeight / 3) {
+        return true;
+      }
+      return false;
+    },
+    cancelHeaderAutoScroll() {
+      if (this.navItemClicked || this.scrollPosition >= window.innerHeight) {
         return true;
       }
       return false;

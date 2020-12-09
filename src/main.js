@@ -7,7 +7,7 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
-Vue.use(VueScrollTo, { duration: 300 });
+Vue.use(VueScrollTo, { easing: 'ease-in-out' });
 Vue.use(BootstrapVue);
 
 new Vue({
