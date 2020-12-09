@@ -16,7 +16,7 @@
       <span class="navbar-toggler-icon" />
     </b-navbar-toggle>
 
-    <b-navbar-brand to="#profile">Lars Spangenberg</b-navbar-brand>
+    <b-navbar-brand to="#intro">Lars Spangenberg</b-navbar-brand>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="mr-auto mt-2 mt-lg-0">
