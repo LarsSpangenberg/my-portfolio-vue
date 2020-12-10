@@ -1,5 +1,5 @@
 <template>
-  <b-col class="mb-4" lg="6">
+  <b-col class="mt-5 mx-auto" lg="6">
     <b-card class="mx-auto" border-variant="dark" no-body>
       <b-card-img
         class="image"
@@ -22,8 +22,25 @@
       </b-card-body>
 
       <b-card-body class="project-links flex-grow-0 mb-2 mx-auto">
-        <b-button variant="outline-secondary">Code</b-button>
-        <b-button class="ml-5" variant="outline-secondary">Demo</b-button>
+        <b-button
+          class="px-5"
+          v-if="project.codeUrl"
+          :href="project.codeUrl"
+          target="_blank"
+          variant="info"
+        >
+          Code
+        </b-button>
+
+        <b-button
+          class="ml-5 px-5"
+          v-if="project.liveUrl"
+          :href="project.liveUrl"
+          target="_blank"
+          variant="secondary"
+        >
+          Demo
+        </b-button>
       </b-card-body>
     </b-card>
   </b-col>

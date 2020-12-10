@@ -8,7 +8,7 @@
         <a href="https://github.com/LarsSpangenberg" target="_blank">Github</a>.
       </p>
     </b-container>
-    <b-container class="project-list">
+    <b-container>
       <b-row>
         <project-card
           v-for="(project, index) in projects"
@@ -40,10 +40,6 @@ export default {
 .portfolio {
   background-color: #34345238;
   padding-top: 8%;
-  padding-bottom: 15%;
-}
-
-.project-list {
-  margin-top: 3%;
+  padding-bottom: 8%;
 }
 </style>
