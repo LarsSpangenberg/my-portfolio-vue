@@ -2,14 +2,17 @@
   <section id="about" class="about">
     <b-container>
       <b-row>
-        <b-col class="mb-5" md="4">
+        <b-col
+          class="align-content-center justify-content-center d-flex pb-5 pr-md-5 pr-lg-3"
+          md="4"
+        >
           <img
             alt="author thumbnail"
-            class="rounded-circle profile-pic"
+            class="rounded-circle my-auto"
             src="@/assets/stupid-face-200.png"
           />
         </b-col>
-        <b-col class="about-content" md="8">
+        <b-col class="text-md-left" md="8">
           <h1 class="about-title">Hi, I'm Lars. Nice to meet you!</h1>
           <p>I am a self-taught developer, constantly learning, and enjoying every minute of it.</p>
           <h2>My tech stack:</h2>
@@ -29,10 +32,6 @@
   padding-top: 15%;
   padding-bottom: 15%;
   min-height: 100vh;
-}
-
-.about-content {
-  text-align: left;
 }
 
 h1 {
