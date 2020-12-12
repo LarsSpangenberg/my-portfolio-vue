@@ -7,7 +7,7 @@
       <div class="header-content mx-3" :class="titleVisibility">
         <h1 class="header-title">Fullstack Web and Android Developer</h1>
         <p class="header-subtitle">
-          Most powerful Developer on the Planet, with an IQ of over 9000.
+          Self-taught developer based in Christiansburg, VA.
         </p>
       </div>
     </b-container>
