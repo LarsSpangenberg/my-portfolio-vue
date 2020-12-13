@@ -27,7 +27,7 @@
           v-if="project.codeUrl"
           :href="project.codeUrl"
           target="_blank"
-          variant="info"
+          variant="outline-info"
         >
           Code
         </b-button>

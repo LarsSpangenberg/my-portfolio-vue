@@ -45,8 +45,7 @@
 <style scoped>
 .container {
   padding-top: 10%;
-  padding-bottom: 15%;
-  min-height: 100vh;
+  padding-bottom: 10%;
 }
 
 h1 {
