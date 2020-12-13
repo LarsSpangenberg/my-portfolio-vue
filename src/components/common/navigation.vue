@@ -39,11 +39,6 @@
 
 <script>
 export default {
-  // data() {
-  //   return {
-  //     navItemClicked: false,
-  //   };
-  // },
   props: {
     scrolledPastHeader: Boolean,
   },

@@ -38,8 +38,8 @@ export default {
 
 <style scoped>
 .portfolio {
-  background-color: #34345238;
-  padding-top: 8%;
-  padding-bottom: 8%;
+  background-color: #f8f8f8;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 </style>

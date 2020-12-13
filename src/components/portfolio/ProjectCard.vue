@@ -60,14 +60,6 @@ export default {
   max-width: 500px;
 }
 
-/* .image {
-  height: 250px;
-} */
-
-/* .card-subtitle {
-  font-size: .9rem;
-} */
-
 .btn-demo {
   margin-left: 20px;
 }

@@ -19,7 +19,7 @@
             technologies.
           </p>
 
-          <h2>Technologies I use frequently:</h2>
+          <h2 class="mb-4">Technologies I use frequently:</h2>
           <p>
             <strong class="d-block d-md-inline">JavaScript:</strong>
             React, Vue.js, Node.js and Express, JQuery, Redux...
