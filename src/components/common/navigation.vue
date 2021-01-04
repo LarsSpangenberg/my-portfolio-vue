@@ -39,12 +39,20 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isNavExpanded: false,
+    };
+  },
   props: {
     scrolledPastHeader: Boolean,
   },
   computed: {
     navBackground() {
-      return this.$props.scrolledPastHeader ? '' : 'bg-transparent';
+      if (!this.scrolledPastHeader && !this.isNavExpanded) {
+        return 'bg-tranparent';
+      }
+      return '';
     },
   },
   methods: {
@@ -64,11 +72,16 @@ export default {
       };
     },
   },
+  mounted() {
+    this.$root.$on('bv::collapse::state', (collapseId, isJustShown) => {
+      this.isNavExpanded = isJustShown;
+    });
+  },
 };
 </script>
 
 <style scoped>
 .navbar {
-  transition: all .1s;
+  transition: all .1s ease-in-out;
 }
 </style>
