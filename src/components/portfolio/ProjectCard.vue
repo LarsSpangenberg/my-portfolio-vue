@@ -5,8 +5,6 @@
         class="image"
         :src="project.image || require('@/assets/' + project.localImage)"
         alt="Project Image"
-        height="275px"
-        top
       />
 
       <b-card-body>
@@ -18,12 +16,16 @@
           {{ project.technologies }}
         </b-card-sub-title>
 
-        <b-card-text class="card-text mt-4">{{ project.description }}</b-card-text>
+        <b-card-text class="card-text mt-4">
+          {{ project.description}}
+        </b-card-text>
       </b-card-body>
 
-      <b-card-body class="project-links flex-grow-0 mb-2 mx-auto">
+      <b-card-body
+        class="project-links d-flex justify-content-around flex-wrap flex-grow-0 px-sm-5 mb-2"
+      >
         <b-button
-          class="px-5"
+          class="btn-xs-block px-5"
           v-if="project.codeUrl"
           :href="project.codeUrl"
           target="_blank"
@@ -33,7 +35,7 @@
         </b-button>
 
         <b-button
-          class="ml-5 px-5"
+          class="btn-xs-block px-5"
           v-if="project.liveUrl"
           :href="project.liveUrl"
           target="_blank"
@@ -60,7 +62,21 @@ export default {
   max-width: 500px;
 }
 
-.btn-demo {
-  margin-left: 20px;
+.image {
+  max-height: 275px;
+}
+
+/* .image__mobile {
+  margin-top: 10px;
+  width: auto;
+  align-self: center;
+} */
+
+@media screen and (max-width: 420px) {
+  .btn-xs-block {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+  }
 }
 </style>
