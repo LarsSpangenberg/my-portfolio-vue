@@ -15,8 +15,8 @@
         <b-col class="text-md-left px-5 px-md-3" md="8">
           <h1 class="about-title">Hi, I'm Lars. Nice to meet you!</h1>
           <p>
-            I am a self-taught developer, always learning and keeping up to date with the latest
-            technologies.
+            I am a self-taught developer, always learning and keeping up to date with the
+            latest technologies.
           </p>
 
           <h2 class="mb-4">Technologies I use frequently:</h2>
@@ -48,8 +48,10 @@
   padding-bottom: 10%;
 }
 
-h1 {
-  font-size: 1.75rem;
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 h2 {

@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
 p {
   font-family: 'Roboto Slab', serif;
   line-height: 2rem;

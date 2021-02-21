@@ -70,10 +70,6 @@ export default {
   .intro-background-img {
     background-image: url('../assets/portfolio-banner-md.png');
   }
-
-  .header-title {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (max-width: 480px) {
